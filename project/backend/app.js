@@ -1,8 +1,7 @@
 import sequelize from './src/database/index'
 import express from 'express'
 import dotenv from 'dotenv'
-
-const app = express()
+import app from "./src/config/index"
 
 dotenv.config()
 const port = process.env.PORT || 3000
