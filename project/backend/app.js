@@ -1,4 +1,4 @@
-import sequelize from './src/index.js'
+import sequelize from './src/database/index'
 import express from 'express'
 import dotenv from 'dotenv'
 

@@ -12,16 +12,16 @@ const sequelize = new Sequelize(process.env.DB_NAME, process.env.DB_USER, proces
     dialect: process.env.DB_DIALECT,
 })
 
-Disciplina.init(sequelize)
-Disciplina.sync({ alter: true })
+//Disciplina.init(sequelize)
+//Disciplina.sync({ alter: true })
 
-Professor.init(sequelize)
-Professor.sync({ alter: true })
+//Professor.init(sequelize)
+//Professor.sync({ alter: true })
 
-Sala.init(sequelize)
-Sala.sync({ alter: true })
+//Sala.init(sequelize)
+//Sala.sync({ alter: true })
 
-Turma.init(sequelize)
-Turma.sync({ alter: true })
+//Turma.init(sequelize)
+//Turma.sync({ alter: true })
 
 export default sequelize
