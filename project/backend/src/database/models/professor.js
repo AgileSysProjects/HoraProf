@@ -15,6 +15,10 @@ class Professor extends Model {
             email: {
                 type: DataTypes.STRING,
                 allowNull: false
+            },
+            workTime: {
+                type: DataTypes.ARRAY(DataTypes.STRING),
+                allowNull: true
             }
         }, {
             sequelize,
