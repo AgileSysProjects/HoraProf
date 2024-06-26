@@ -8,6 +8,7 @@ router.get("/", (req, res) => {
     return res.json({ message: "Routes working!" })
 })
 
+router.get("/professor", (req, res) => professorController.findAll(req, res))
 router.post("/professor", (req, res) => professorController.create(req, res))
 
 export default router
