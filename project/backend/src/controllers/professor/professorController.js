@@ -13,8 +13,21 @@ class ProfessorController {
     }
 
     async findAll(req, res) {
-        const professores = await this.ProfessorUseCase.findAll()
-        return res.json(professores)
+        try {
+            const professores = await this.ProfessorUseCase.findAll()
+            return res.status(201).json(professores)
+        } catch(err) {
+            res.status(500).json({ error: err.message })
+        }
+    }
+
+    async update(req, res) {
+        try {
+            const professor = await this.ProfessorUseCase.update(req.body)
+            return res.status(201).json(professor)
+        } catch (err) {
+            res.status(500).json({ error: err.message })
+        }
     }
 }
 

@@ -12,6 +12,11 @@ class ProfessorUseCase {
         const professores = await this.professorRepository.findAll()
         return professores
     }
+
+    async update(professorData) {
+        const professor = await this.professorRepository.update(professorData)
+        return professor
+    }
 }
 
 export default ProfessorUseCase

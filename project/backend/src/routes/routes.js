@@ -10,5 +10,6 @@ router.get("/", (req, res) => {
 
 router.get("/professor", (req, res) => professorController.findAll(req, res))
 router.post("/professor", (req, res) => professorController.create(req, res))
+router.put("/professor", (req, res) => professorController.update(req, res))
 
 export default router

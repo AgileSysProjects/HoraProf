@@ -13,6 +13,13 @@ class ProfessorRepository {
         })
         return professores
     }
+
+    async update(professor) {
+        const result = await sequelize.models.Professor.update(professor, {
+            where: {"id": "id"}
+        })
+        return result
+    }
 }
 
 export default ProfessorRepository
