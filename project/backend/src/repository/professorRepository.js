@@ -14,9 +14,14 @@ class ProfessorRepository {
         return professores
     }
 
-    async update(professor) {
+    async findById(id) {
+        const result = await sequelize.models.Professor.findByPk(id)
+        return result ? result : null
+    }
+
+    async update(professor, id) {
         const result = await sequelize.models.Professor.update(professor, {
-            where: {"id": "id"}
+            where: {id: id}
         })
         return result
     }

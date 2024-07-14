@@ -1,5 +1,4 @@
 import sequelize from './src/database/index'
-import express from 'express'
 import dotenv from 'dotenv'
 import app from "./src/config/index"
 

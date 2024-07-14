@@ -21,9 +21,20 @@ class ProfessorController {
         }
     }
 
+    async findById(req, res) {
+        try {
+            const { id } = req.params
+            const professor = await this.ProfessorUseCase.findById(id)
+            return res.status(201).json(professor)
+        } catch(err) {
+            res.status(500).json({ error: err.message })
+        }
+    }
+
     async update(req, res) {
         try {
-            const professor = await this.ProfessorUseCase.update(req.body)
+            const { id } = req.params
+            const professor = await this.ProfessorUseCase.update(req.body, id)
             return res.status(201).json(professor)
         } catch (err) {
             res.status(500).json({ error: err.message })
