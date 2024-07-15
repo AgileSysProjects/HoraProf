@@ -9,8 +9,8 @@ router.get("/", (req, res) => {
     return res.json({ message: "Routes working!" })
 })
 
-router.get("/professor", (req, res) => professorController.findAll(req, res))
 router.post("/professor", (req, res) => professorController.create(req, res))
+router.get("/professor", (req, res) => professorController.findAll(req, res))
 router.get("/professor/:id", (req, res) => professorController.findById(req, res))
 router.put("/professor/:id", (req, res) => professorController.update(req, res))
 

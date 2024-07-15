@@ -21,13 +21,13 @@ class Turma extends Model {
             modelName: 'Turma'
         })
     }
-    /*
+    
     static associate(models) {
         this.belongsTo(models.Disciplina, { foreignKey: 'disciplinaId', as: 'disciplina' })
         this.belongsTo(models.Professor, { foreignKey: 'professorId', as: 'professor' })
         this.belongsTo(models.Sala, { foreignKey: 'salaId', as: 'sala' })
     }
-    */
+    
 }
 
 export default Turma
